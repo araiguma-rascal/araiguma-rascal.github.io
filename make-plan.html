@@ -32,8 +32,6 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="https://www.rakuten-sec.co.jp">楽天証券</a>
                         <a class="dropdown-item" href="https://www.rakuten-card.co.jp/e-navi/">楽天e-navi</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
                     </div>
                 </li>
         </div>
@@ -73,21 +71,36 @@
             </div>
             <div class="form-group">
                 <label for="goods-for-everyone">個人装備</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="goods-for-party">共同装備</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="etcetra">備考欄</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <button type="button" class="btn btn-outline-secondary" id="climbing-way">山行種別</button>
+                        <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <button type="button" id="test">テスト</button>
+                            <a class="dropdown-item" href="#" id="summer-hike">夏山ハイク</a>
+                            <a class="dropdown-item" href="#" id="winter-hike">冬山ハイク</a>
+                            <a class="dropdown-item" href="#" id="overnight">泊まり</a>
+                        </div>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+                </div>
+                <div class="form-group">
+                    <label for="goods-for-party">共同装備</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="etcetra">備考欄</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
 
     <!-- Optional JavaScript -->
+    <script src="script.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
