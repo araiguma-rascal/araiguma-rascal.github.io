@@ -10,3 +10,8 @@ $("select").change(function () {
         $("#goods-foreach-input").val("");
     }
 });
+
+window.addEventListener("beforeunload", (event) => {
+    event.preventDefault();
+    event.returnValue = '入力内容が破棄されてしまいます';
+});
