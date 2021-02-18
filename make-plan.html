@@ -54,29 +54,33 @@
     <div class="container">
         <form>
             <div class="form-group">
+                <label for="mountain" class="text-info">登る山</label>
+                <input type="text" class="form-control" id="mountain" placeholder="例：高尾山">
+            </div>
+            <div class="form-group">
                 <label for="date" class="text-info">日程</label>
                 <input type="date" class="form-control" id="date" placeholder="例：2020/11/7(土)">
             </div>
             <div class="form-group">
                 <label for="planner" class="text-info">作成者</label>
-                <input type="area" class="form-control" id="planner" placeholder="例：田中太郎">
+                <input type="text" class="form-control" id="planner" placeholder="例：田中太郎">
             </div>
             <div class="form-group">
                 <label for="area" class="text-info">山域</label>
-                <input type="area" class="form-control" id="area" placeholder="例：奥多摩">
+                <input type="text" class="form-control" id="area" placeholder="例：奥多摩">
             </div>
-            <div class="form-group">
+            <div class="form-group" id="member-list">
                 <label class="text-info">メンバーリスト</label>
-                <div class="container border rounded form-group">
+                <div class="container border rounded form-group" id="CL">
                     <label for="CL">CL</label>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="fullname_kanji">氏名</label>
-                            <input type="text" class="form-control" id="fullname_kanji" placeholder="氏名">
+                            <input type="text" class="form-control" id="fullname-kanji" placeholder="氏名">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="fullname_kana">フリガナ</label>
-                            <input type="text" class="form-control" id="fullname_kana" placeholder="フリガナ">
+                            <input type="text" class="form-control" id="fullname-kana" placeholder="フリガナ">
                         </div>
                     </div>
                     <div class="form-row">
@@ -90,36 +94,36 @@
                             </div>
                         </div>
                         <div class="form-group col-md-3">
-                            <label for="type">血液型</label>
+                            <label for="blood-type">血液型</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="type" placeholder="A, B, AB or O">
+                                <input type="text" class="form-control" id="blood-type" placeholder="A, B, AB or O">
                                 <div class="input-group-append">
                                     <span class="input-group-text">型</span>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group col-md-3">
-                            <label for="inputEmail4">期</label>
+                            <label for="generation">期</label>
                             <div class="input-group">
-                                <input type="number" class="form-control">
+                                <input type="number" class="form-control" id="generation">
                                 <div class="input-group-append">
                                     <span class="input-group-text">期</span>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group col-md-3">
-                            <label for="inputPassword4">保険</label>
-                            <input type="text" class="form-control" id="inputPassword4" placeholder="未加入、jRO">
+                            <label for="insurance">保険</label>
+                            <input type="text" class="form-control" id="insurance" placeholder="未加入、jRO">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="inputEmail4">所属</label>
-                            <input type="text" class="form-control" id="inputEmail4" placeholder="東京大学理科一類1年">
+                            <label for="belong">所属</label>
+                            <input type="text" class="form-control" id="belong" placeholder="東京大学理科一類1年">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="inputPassword4">電話番号</label>
-                            <input type="tel" class="form-control" id="inputPassword4" placeholder="080-1234-5678">
+                            <label for="tel">電話番号</label>
+                            <input type="tel" class="form-control" id="tel" placeholder="080-1234-5678">
                         </div>
                     </div>
                 </div>
@@ -244,7 +248,7 @@
             </div>
             <div class="form-group">
                 <label for="meeting-location" class="text-info">集合</label>
-                <input type="area" class="form-control" id="meeting-location" placeholder="例：JR東京駅山手線秋葉原上野方面行き 8:00集合">
+                <input type="text" class="form-control" id="meeting-location" placeholder="例：JR東京駅山手線秋葉原上野方面行き 8:00集合">
             </div>
             <div class="form-group">
                 <label for="goods-for-party" class="text-info">共同装備</label>
