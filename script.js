@@ -11,6 +11,19 @@ $("select").change(function () {
     }
 });
 
+$(document).on("click", ".add-member", function () {
+    $addedElement = $(this).parent().clone(true).insertAfter($(this).parent());
+    $addedElement.slideDown(5);
+});
+
+$(document).on("click", ".delete-member", function () {
+    var target = $(this).parent();
+    if (target.parent().children(".container").length > 3) { //3というのは、CL, SL, メンバー1人、合わせて3
+        target.remove();
+    }
+});
+
+
 window.addEventListener("beforeunload", (event) => {
     event.preventDefault();
     event.returnValue = '入力内容が破棄されてしまいます';
