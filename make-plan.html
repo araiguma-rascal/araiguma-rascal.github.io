@@ -52,20 +52,19 @@
     <div class="container">
         <form>
             <div class="form-group">
-                <label for="date">日程</label>
-                <input type="date" class="form-control" id="date" aria-describedby="emailHelp"
-                    placeholder="例：2020/11/7(土)">
+                <label for="date" class="text-info">日程</label>
+                <input type="date" class="form-control" id="date" placeholder="例：2020/11/7(土)">
             </div>
             <div class="form-group">
-                <label for="planner">作成者</label>
-                <input type="area" class="form-control" id="planner" aria-describedby="emailHelp" placeholder="例：田中太郎">
+                <label for="planner" class="text-info">作成者</label>
+                <input type="area" class="form-control" id="planner" placeholder="例：田中太郎">
             </div>
             <div class="form-group">
-                <label for="area">山域</label>
-                <input type="area" class="form-control" id="area" aria-describedby="emailHelp" placeholder="例：奥多摩">
+                <label for="area" class="text-info">山域</label>
+                <input type="area" class="form-control" id="area" placeholder="例：奥多摩">
             </div>
             <div class="form-group">
-                <label>メンバーリスト</label>
+                <label class="text-info">メンバーリスト</label>
                 <div class="container border rounded form-group">
                     <label for="CL">CL</label>
                     <div class="form-row">
@@ -242,29 +241,28 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="meeting-location">集合</label>
-                <input type="area" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                    placeholder="例：JR東京駅山手線秋葉原上野方面行き 8:00集合">
+                <label for="meeting-location" class="text-info">集合</label>
+                <input type="area" class="form-control" id="meeting-location" placeholder="例：JR東京駅山手線秋葉原上野方面行き 8:00集合">
             </div>
             <div class="form-group">
-                <label for="goods-for-party">共同装備</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                <label for="goods-for-party" class="text-info">共同装備</label>
+                <textarea class="form-control" id="goods-for-party" rows="5"></textarea>
             </div>
             <div class="form-group">
                 <form class="form-group">
-                    <label for="goods-for-everyone">個人装備</label>
+                    <label for="goods-foreach" class="text-info">個人装備</label>
                     <select class="custom-select my-1 mr-sm-2" id="climbing-way">
                         <option selected>山行形態</option>
                         <option value="1" id="summer-hike">夏山ハイク</option>
                         <option value="2" id="winter-hike">冬山ハイク</option>
                         <option value="3" id="overnight">泊まり</option>
                     </select>
-                    <textarea class="form-control" rows="3" id="goods-foreach-input"></textarea>
+                    <textarea class="form-control" rows="3" id="goods-foreach"></textarea>
                 </form>
             </div>
             <div class="form-group">
-                <label for="etcetra">備考欄</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                <label for="etcetra" class="text-info">備考欄</label>
+                <textarea class="form-control" id="etcetra" rows="5"></textarea>
             </div>
             <button type="submit" class="btn btn-primary" id="submit">.txtファイルを出力</button>
         </form>
