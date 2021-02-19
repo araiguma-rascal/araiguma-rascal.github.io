@@ -32,11 +32,12 @@ $(document).on("click", "#submit", function () {
 
 const makePlanText = () => {
     var climbingPlan = "";
-    climbingPlan += "山岳愛好会雷鳥(東京大学・お茶の水女子大学公認サークル)\n";
-    climbingPlan += document.getElementById("mountain").value + "計画書\n";
-    climbingPlan += "作成者 " + document.getElementById("planner").value + "\n";
-    climbingPlan += "■日程 " + document.getElementById("date").value + "\n";
-    climbingPlan += "■山域 " + document.getElementById("area").value + "\n";
+    climbingPlan +=
+        "山岳愛好会雷鳥(東京大学・お茶の水女子大学公認サークル)\n"
+        + $("#mountain").val() + "計画書\n"
+        + "作成者 " + $("#planner").val() + "\n"
+        + "■日程 " + $("#date").val() + "\n"
+        + "■山域 " + $("#area").val() + "\n";
     memberNum = $("#member-list").children(".container").length;
     climbingPlan += "■メンバー(" + String(memberNum) + "人)\n";
     for (let i = 0; i < memberNum; i++) {
@@ -52,10 +53,24 @@ const makePlanText = () => {
                 + $baseTarget.find("#tel").val() + "\n";
         }
     }
+    climbingPlan +=
+        "\n"
+        + "■集合\n"
+        + $("#meeting-location").val() + "\n\n"
+        + "■個人装備\n"
+        + $("#goods-for-each").val() + "\n\n"
+        + "■共同装備\n"
+        + $("#goods-for-party").val() + "\n\n"
+        + "■備考\n"
+        + $("#etcetra").val() + "\n\n";
+
     return climbingPlan;
 }
 
+/*
+Safariならこれ不要
 window.addEventListener("beforeunload", (event) => {
     event.preventDefault();
     event.returnValue = '入力内容が破棄されてしまいます';
 });
+*/
